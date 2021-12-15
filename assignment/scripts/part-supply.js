@@ -63,7 +63,7 @@ console.log('8. Total supplies available is:');
 for(i=1; i<supplyChanges.length; i++){
   supplyChanges[i] = supplyChanges[i-1] + supplyChanges[i];
   console.log(supplyChanges[i]);
-}
+};
 
 
 // 9. We have a large stash of parts in our warehouse that we
@@ -76,10 +76,13 @@ console.log('9. Filling boxes with a "while" loop');
 let availableParts = 572;
 let partsInABox = 7;
 let count = 0;
-let remainder = availableParts - partsInABox*count;
-while(remainder >= partsInABox){
-  let remainder = availableParts - partsInABox*count;
-  count ++;
+let remainder = availableParts - partsInABox*count
+
+while(availableParts - partsInABox*count >= partsInABox){
+  count++;
+  remainder = availableParts - partsInABox*count;
   console.log(count);
   console.log(remainder);
-}
+};
+
+console.log(`There are ${count} boxes and ${remainder} left-over parts.`);
