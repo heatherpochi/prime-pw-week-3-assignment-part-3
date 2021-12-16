@@ -25,6 +25,8 @@ console.log(removedValue);
 console.log('5. Adding 25 to supplyChanges.');
 supplyChanges.push(25);
 
+console.log(supplyChanges);
+
 // 6. Write a `for` loop that shows each value in the 'supplyChanges' array
 //    Use a console.log formatted as follows, where x is the value from the array
 //    - if it is a positive number (greater than 0), log 'Added x parts.'
@@ -59,11 +61,20 @@ console.log('7. Showing supplyChanges with "for of" loop');
 
 // 8. Write a loop to determine the total number of parts available by
 //    adding up all the numbers in the 'supplyChanges' array.
+//option 1
 console.log('8. Total supplies available is:');
+let result=0;
+for(i=0; i<supplyChanges.length; i++){
+  result = result+supplyChanges[i];
+};
+console.log('Total supplies available is: ',result)
+
+//option 2
+
 for(i=1; i<supplyChanges.length; i++){
   supplyChanges[i] = supplyChanges[i-1] + supplyChanges[i];
   console.log(supplyChanges[i]);
-};
+}
 
 
 // 9. We have a large stash of parts in our warehouse that we
