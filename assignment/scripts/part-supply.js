@@ -46,7 +46,7 @@ for (let i = 0; i < supplyChanges.length; i++){
 // STRETCH GOALS
 console.log('---  Stretch Goals  ---');
 // 7. Rewrite the `for` loop from #6 as a `for of` loop.
-for (value of supplyChanges){
+for (let value of supplyChanges){
   if(value > 0){
     console.log(`Added ${value} parts.`);
   }
@@ -64,14 +64,14 @@ console.log('7. Showing supplyChanges with "for of" loop');
 //option 1
 console.log('8. Total supplies available is:');
 let result=0;
-for(i=0; i<supplyChanges.length; i++){
+for(let i=0; i<supplyChanges.length; i++){
   result = result+supplyChanges[i];
 };
 console.log('Total supplies available is:',result)
 
 //option 2
 
-for(i=1; i<supplyChanges.length; i++){
+for(let i=1; i<supplyChanges.length; i++){
   supplyChanges[i] = supplyChanges[i-1] + supplyChanges[i];
   //console.log(supplyChanges[i]);
 }
